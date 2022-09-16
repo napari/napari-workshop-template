@@ -52,9 +52,9 @@ pages](https://pages.github.com/), follow the steps below.
 
     ```
     - name: Build workshop
-        run: |
-          python -m pip install -r requirements.txt
-          jupyter book build napari-workshops
+      run: |
+        python -m pip install -r requirements.txt
+        jupyter book build napari-workshops
     ```
 2. Edit the `.github/workflows/pages.yml` file in your workshop folder to
    set up the desired folder there the (html) built artifacts are stored. By
