@@ -2,6 +2,8 @@
 
 A JupyterBook template for napari workshops.
 
+**To see the built website, go to https://melissawm.github.io/napari-workshop-template**
+
 ## Build locally
 
 To build this workshop locally and preview your workshop materials, follow the
