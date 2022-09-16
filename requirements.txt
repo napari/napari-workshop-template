@@ -1,0 +1,4 @@
+napari[all]
+jupyter-book
+matplotlib
+numpy
