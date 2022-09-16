@@ -9,7 +9,7 @@ A JupyterBook template for napari workshops.
 To build this workshop locally and preview your workshop materials, follow the
 steps below.
 
-1. Install all required packages
+### 1. Install all required packages
 
 In a console/terminal, after installing python on your system using the
 distribution of your choice, and ideally
@@ -20,7 +20,7 @@ run
 python -m pip install -r requirements.txt
 ```
 
-2. Build your book
+### 2. Build your book
 
 To render the html version of your book, including autogenerating figures or
 running Jupyter notebooks, run
