@@ -11,9 +11,15 @@ steps below.
 
 ### 1. Install all required packages
 
+First, [fork this repository](https://docs.github.com/en/get-started/quickstart/fork-a-repo) and clone it to your local system by
+
+```
+git clone git@github.com:<your-username>/napari-workshop-template.git
+```
+
 In a console/terminal, after installing python on your system using the
 distribution of your choice, and ideally
-[using a virtual environment](https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/),
+[using a virtual environment](https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/), navigate to the napari-workshop-template folder,
 run
 
 ```
@@ -90,9 +96,9 @@ TODO
 ## Index your workshop using Zenodo (for citation purposes)
 
 If you want people to be able to cite your workshop materials, you can create
-a DOI for it using [Zenodo](https://zenodo.org/).
+a DOI for it using [Zenodo](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content).
 
-TODO
+Select Creative Commons Attribution 4.0 International (CC-BY 4.0) license if you want attribution.
 
 ## Enable a citation file for your repository
 
