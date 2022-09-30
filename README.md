@@ -10,6 +10,9 @@ This repository is meant to be [forked](https://docs.github.com/en/get-started/q
 
 Once you have created your workshop, if you would like the event to be listed [in napari.org](https://napari.org/stable/further-resources/napari-workshops.html), feel free to submit a pull request to https://github.com/napari/napari
 
+## Documentation
+
+To learn more about how to build, publish, share and cite your workshop materials, check the [Build your own workshop section](https://melissawm.github.io/napari-workshop-template/build_your_workshop.html).
 
 ## Contributing to this repository
 

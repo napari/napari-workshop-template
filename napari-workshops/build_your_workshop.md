@@ -1,5 +1,10 @@
 # Build your own workshop
 
+```{note}
+This section is about building your own workshop - it should probably be removed
+from your workshop material once you have adapted it to your needs.
+```
+
 ## Build locally
 
 To build this workshop locally and preview the generated materials in html format (as a webpage), follow the steps below.
@@ -42,7 +47,8 @@ stored on GitHub, so we added the following path to our `.gitignore` file:
 napari-workshops/_build/
 ```
 
-## Publish your workshop materials as a static web page
+## Publish and share your workshop
+### Publish your workshop materials as a static web page
 
 If you want to set up this material to be published as a website from your fork, using [GitHub pages](https://pages.github.com/), follow the steps below.
 
@@ -69,7 +75,7 @@ If you want to set up this material to be published as a website from your fork,
     ```
 
 As currently configured, whenever a new commit is added to the `main` branch of the repository, a new deployment is made (the Jupyter book is built, and the
-generated pages are uploaded to [GitHub pages](https://docs.github.com/en/pages/quickstart). For this to work, you need to have GitHub pages enabled on your GitHub account. To do this, follow the [deployment guide]().
+generated pages are uploaded to [GitHub pages](https://docs.github.com/en/pages/quickstart). For this to work, you need to have GitHub pages enabled on your GitHub account. To do this, follow the [deployment guide](deployment_guide).
 
 After GitHub pages is set up for your repository, you will find the workshop materials at
 
@@ -81,7 +87,7 @@ For this template, the built site is at
 
 https://melissawm.github.io/napari-workshop-template
 
-## Publish your workshop materials as live notebooks
+### Publish your workshop materials as live notebooks
 
 If you want to set up this material to be used as live notebooks, meaning folks
 can edit and execute them using the [mybinder.org](https://mybinder.org/)
@@ -98,4 +104,4 @@ Select Creative Commons Attribution 4.0 International (CC-BY 4.0) license if you
 
 ## Enable a citation file for your repository
 
-Check [the GitHub documentation](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-citation-files) for more details on how to use the `citation.cff` file to enable other to cite your repository.
+Check [the GitHub documentation](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-citation-files) for more details on how to use the `citation.cff` file to enable others to cite your repository.
