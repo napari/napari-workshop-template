@@ -4,9 +4,9 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.10.3
+    jupytext_version: 1.14.1
 kernelspec:
-  display_name: Python 3
+  display_name: Python 3 (ipykernel)
   language: python
   name: python3
 ---
@@ -21,8 +21,8 @@ Colormaps are an essential part of visualizing your image data, as they can affe
 
 We will start by loading an image of DAPI stained nuclei. We can use `scikit-image`'s `imread()` function to download the data from the link below and load it into a numpy array called `nuclei`.
 
-```{code-cell} python
-:tags: ["remove-output"]
+```{code-cell} ipython3
+:tags: [remove-output]
 
 from skimage.io import imread
 
@@ -34,8 +34,9 @@ nuclei = imread(nuclei_url)
 
 As we did in the previous notebooks, we can view the image in napari using the `napari.view_image()` function. Here we set the colormap to `blue`. We additionally set the contrast limits and select a z slice where the nuclei are in focus.
 
-```{code-cell} python
-:tags: ["remove-output"]
+```{code-cell} ipython3
+:tags: [remove-output]
+
 import napari
 
 viewer = napari.view_image(
@@ -46,10 +47,9 @@ viewer = napari.view_image(
 
 # choose the z slice where nuclei are in focus
 viewer.dims.current_step = (30, 0, 0)
-
 ```
 
-```{code-cell} python
+```{code-cell} ipython3
 from napari.utils import nbscreenshot
 
 nbscreenshot(viewer)
@@ -59,7 +59,7 @@ nbscreenshot(viewer)
 
 We can inspect the current colormap via the `colormap` property of the `Image` layer.
 
-```{code-cell} python
+```{code-cell} ipython3
 viewer.layers[0].colormap
 ```
 
@@ -69,7 +69,7 @@ To create the lookup table, we create an array of colors. The first element will
 
 We use numpy linspace to interpolate colors between white and blue for demonstration purposes. However, as we will see below, if you just to linearly interpolate, you can just pass the end points (`[1, 1, 1, 1]` and `[0, 0, 1, 1]` in this case) and napari will do the interpolation for you.
 
-```{code-cell} python
+```{code-cell} ipython3
 import numpy as np
 
 colors = np.linspace(
@@ -88,7 +88,7 @@ We pass our new colormap to the layer as a dictionary. We use the following keys
 - name: this is the displayed name of the colormap
 - interpolation: this is the interpolation mode that is applied to the lookup table. Here we use `'linear'` for linear interpolation.
 
-```{code-cell} python
+```{code-cell} ipython3
 new_colormap = {
     'colors': colors,
     'name': 'white_to_blue',
@@ -97,7 +97,7 @@ new_colormap = {
 viewer.layers[0].colormap = new_colormap
 ```
 
-```{code-cell} python
+```{code-cell} ipython3
 nbscreenshot(viewer)
 ```
 
@@ -105,13 +105,13 @@ nbscreenshot(viewer)
 
 We can also use a custom colormap when creating a new layer. We define the colormap as before. Note that since we are using linear interpolation, we can just define the end points of the look up table. In our `white_to_green` colormap, we just define the minimum value (white, `[1, 1, 1, 1]`) and the maximum value (green, `[0, 1, 0, 1]`). When constructing the new `Image` layer, we additionally set the `contrast_limits` and `opacity` to make the layer move visible.
 
-```{code-cell} python
+```{code-cell} ipython3
 # load the image data
 membranes_url = 'https://raw.githubusercontent.com/alisterburt/napari-workshops/main/napari-workshops/notebooks/data/cell_membranes.tif'
 membranes = imread(membranes_url)
 ```
 
-```{code-cell} python
+```{code-cell} ipython3
 white_green_cmap = {
     'colors': [[1, 1, 1, 1], [0, 1, 0, 1]],
     'name': 'white_to_green',
@@ -126,7 +126,7 @@ viewer.add_image(
 )
 ```
 
-```{code-cell} python
+```{code-cell} ipython3
 nbscreenshot(viewer)
 ```
 

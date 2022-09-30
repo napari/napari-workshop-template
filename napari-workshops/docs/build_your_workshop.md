@@ -93,7 +93,13 @@ If you want to set up this material to be used as live notebooks, meaning folks
 can edit and execute them using the [mybinder.org](https://mybinder.org/)
 service, follow the steps below.
 
-TODO
+1. Go to https://mybinder.org
+2. Paste the address to your repo and in the "Git ref" field select "main"
+3. Click the "launch" button.
+
+After a few moments, you will have a live version of your notebooks hosted on the browser!
+
+Please note that any editing you do here will **not** be automatically saved, as these files are temporary and will be deleted after you close the browser window.
 
 ## Index your workshop using Zenodo (for citation purposes)
 
