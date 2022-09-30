@@ -4,6 +4,10 @@
 format: jb-book
 root: home
 chapters:
+- file: build_your_workshop
+  sections:
+  - file: deployment_guide
+chapters:
 - file: getting_started
   sections:
   - file: installation
@@ -12,7 +16,7 @@ chapters:
   sections:
   - file: notebooks/intro_bioimage_visualization
   - file: notebooks/spot_detection
-  - file: notebooks/segmenting_and_measuring_nuclei_stardist.md
+  - file: notebooks/segmenting_and_measuring_nuclei_stardist
   - file: notebooks/manual_annotation
-  - file: notebooks/custom_colormaps.md
+  - file: notebooks/custom_colormaps
 - file: make_a_simple_plugin
