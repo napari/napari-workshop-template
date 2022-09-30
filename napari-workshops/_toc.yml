@@ -4,9 +4,9 @@
 format: jb-book
 root: home
 chapters:
-- file: build_your_workshop
+- file: docs/build_your_workshop
   sections:
-  - file: deployment_guide
+  - file: docs/deployment_guide
 - file: getting_started
   sections:
   - file: installation
