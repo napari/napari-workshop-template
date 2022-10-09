@@ -1,7 +1,0 @@
-#!/bin/bash
-
-export QT_QPA_PLATFORM=offscreen
-export XDG_RUNTIME_DIR=/home/jovyan/
-export RUNLEVEL=3
-
-exec "$@"
