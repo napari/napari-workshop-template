@@ -4,7 +4,7 @@ A JupyterBook template for napari workshops.
 
 **To see the built website, go to https://melissawm.github.io/napari-workshop-template**
 
-**To see a live version where you can execute the notebooks on your browser, use [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/melissawm/napari-workshop-template/main)**
+**To see a live version where you can execute the notebooks on your browser, use [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/melissawm/napari-workshop-template/binder)**
 
 ## What is this repository?
 
