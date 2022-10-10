@@ -30,5 +30,6 @@ dependencies:
   - numpydoc
   - napari-plugin-engine
   - napari-svg
+  - jupytext
   - pip:
     - cachey==0.2.1
