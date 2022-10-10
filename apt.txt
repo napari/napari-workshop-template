@@ -11,4 +11,4 @@ xfce4-panel
 xfce4-session
 xfce4-settings
 xorg
-xubuntu-icon-theme 
+xubuntu-icon-theme
