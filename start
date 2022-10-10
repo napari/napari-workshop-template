@@ -1,7 +1,6 @@
-#!/bin/bash
+#!/bin/sh
+set -eux
 
-export QT_QPA_PLATFORM=offscreen
-export XDG_RUNTIME_DIR=/home/jovyan/
-export RUNLEVEL=3
+ln -s "$CONDA_DIR/vnc/Desktop"
 
 exec "$@"
