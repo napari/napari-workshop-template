@@ -4,6 +4,7 @@ channels:
 dependencies:
   - python=3.9
   - jupyter-server-proxy>=1.4
+  - jupytext
   - pip
   - websockify
   - napari
