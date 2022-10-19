@@ -1,2 +1,0 @@
-#!/bin/sh
-exec /usr/bin/dbus-launch xfce4-session
