@@ -18,6 +18,14 @@ One need for bioimage analysts is to interactivly perform analysis on images. Th
 
 ## Setup
 
+```{code-cell} ipython3
+:tags: [remove-output]
+# this cell is required to run these notebooks on Binder. Make sure that you also have a desktop tab open.
+import os
+if 'BINDER_SERVICE_HOST' in os.environ:
+    os.environ['DISPLAY'] = ':1.0'
+```
+
 We start by importing `napari`, our `nbscreenshot` utility and instantiating an empty viewer.
 
 ```{code-cell} ipython3

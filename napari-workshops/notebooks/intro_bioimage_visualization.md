@@ -54,21 +54,10 @@ Learn more about napari at [napari.org](https://napari.org/), including our [tut
 
 ```{code-cell} ipython3
 :tags: [remove-output]
-# this cell is required to run these notebooks on Binder
-# if running on Binder, remember to **WAIT 5 SECONDS** after
-# running the '%gui qt' cell below. If you get an error,
-# click on "Kernel -> Restart" and try again. Make sure also
-# that you have a desktop tab open.
+# this cell is required to run these notebooks on Binder. Make sure that you also have a desktop tab open.
 import os
 if 'BINDER_SERVICE_HOST' in os.environ:
     os.environ['DISPLAY'] = ':1.0'
-```
-
-napari uses Qt for Graphical User Interface (GUI), and when using napari in a jupyter notebook or interactive IPython session, you must first create the Qt application using `%gui qt`. If using napari in a python script you can create the Qt application inside a context using with `napari.gui_qt():`.
-
-```{code-cell} ipython3
-:tags: [remove-output]
-%gui qt
 ```
 
 ## Visualizing data with napari

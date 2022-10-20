@@ -64,6 +64,14 @@ We will use napari to view our data. To do so, we first must create the viewer.
 Once the Viewer is created, we can add images to the viewer via the Viewer's
 `add_image()` method.
 
+```{code-cell} ipython3
+:tags: [remove-output]
+# this cell is required to run these notebooks on Binder. Make sure that you also have a desktop tab open.
+import os
+if 'BINDER_SERVICE_HOST' in os.environ:
+    os.environ['DISPLAY'] = ':1.0'
+```
+
 ```{code-cell} python
 import napari
 

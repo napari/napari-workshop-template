@@ -24,6 +24,15 @@ This tutorial will explore these three manual annotations in **[napari](https://
 
 
 ## Setup
+
+```{code-cell} ipython3
+:tags: [remove-output]
+# this cell is required to run these notebooks on Binder. Make sure that you also have a desktop tab open.
+import os
+if 'BINDER_SERVICE_HOST' in os.environ:
+    os.environ['DISPLAY'] = ':1.0'
+```
+
 We start by importing `napari`, our `nbscreenshot` utility and instantiating an empty viewer
 
 ```{code-cell} ipython3
