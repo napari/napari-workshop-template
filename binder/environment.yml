@@ -7,7 +7,6 @@ dependencies:
   - jupytext
   - pip
   - websockify
-  - napari
   - libxcb
   - pip:
     - jupyter-desktop-server

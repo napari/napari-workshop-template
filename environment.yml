@@ -2,6 +2,6 @@ name: workshop
 channels:
   - conda-forge
 dependencies:
-  - microfilm
+  - napari
   - pip:
-    - napari-skimage-regionprops
+    - napari-animation
