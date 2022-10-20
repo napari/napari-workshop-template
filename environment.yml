@@ -1,0 +1,7 @@
+name: workshop
+channels:
+  - conda-forge
+dependencies:
+  - microfilm
+  - pip:
+    - napari-skimage-regionprops
