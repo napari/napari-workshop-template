@@ -1,4 +1,4 @@
-name: napari
+name: binder
 channels:
   - conda-forge
 dependencies:
