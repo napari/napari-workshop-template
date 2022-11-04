@@ -1,8 +1,8 @@
 # How to deploy your workshop
 
-To allow your workshop materials to be served as a web page, you can use the default setup on GitHub pages. 
+To allow your workshop materials to be served as a web page, you can use the default setup on GitHub pages. Please note that, if this is the first time you are activating the GitHub pages service for your account, further steps may be necessary (such as adding a Personal Access Token to your profile.) Please consult the [GitHub pages documentation](https://docs.github.com/en/pages) for details.
 
-Because there is already a github action workflow configured under `.github/workflows` in your fork to deploy the website, you only need to enable it on your fork.
+Because there is already a GitHub action workflow configured under `.github/workflows` in your fork to deploy the website, you only need to enable it on your fork.
 
 To do this, follow the steps below. **You will only need to do this once per fork.**
 
