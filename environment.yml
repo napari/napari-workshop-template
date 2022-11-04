@@ -4,6 +4,7 @@ channels:
 dependencies:
   - jupyterlab
   - napari
+  - pip
   - pip:
     - jupyter-book
     - napari-animation
