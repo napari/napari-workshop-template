@@ -49,6 +49,14 @@ nuclei = io.imread(url)
 
 ## Viewing the image
 
+```{code-cell} ipython3
+:tags: [remove-output]
+# this cell is required to run these notebooks on Binder. Make sure that you also have a desktop tab open.
+import os
+if 'BINDER_SERVICE_HOST' in os.environ:
+    os.environ['DISPLAY'] = ':1.0'
+```
+
 As we did in the previous notebooks, we can view the image in napari using the
 `napari.view_image()` function. Here we set the colormap to `magma`.
 

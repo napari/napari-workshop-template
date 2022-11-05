@@ -50,6 +50,16 @@ You can (and are encouraged to!) extend `napari` using custom [key bindings](htt
 
 Learn more about napari at [napari.org](https://napari.org/), including our [tutorials](https://napari.org/usage.html), our [API documentation](https://napari.org/api/index.html) and our [mission and values](https://napari.org/community/mission_and_values.html).
 
+## (Optional) Preparing to run this notebook on mybinder.org
+
+```{code-cell} ipython3
+:tags: [remove-output]
+# this cell is required to run these notebooks on Binder. Make sure that you also have a desktop tab open.
+import os
+if 'BINDER_SERVICE_HOST' in os.environ:
+    os.environ['DISPLAY'] = ':1.0'
+```
+
 ## Visualizing data with napari
 
 Let's start by importing napari and creating an empty [napari viewer](https://napari.org/tutorials/fundamentals/viewer.html)

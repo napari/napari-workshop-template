@@ -15,7 +15,7 @@ launch_buttons:
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
-  execute_notebooks: cache
+  execute_notebooks: "cache"
 
 # Define the name of the latex output file for PDF builds
 latex:
@@ -28,7 +28,7 @@ bibtex_bibfiles:
 
 # Information about where the book exists on the web
 repository:
-  url: https://github.com/napari/napari-workshop-template  # Online location of your book
+  url: https://github.com/melissawm/napari-workshop-template  # Online location of your book
   branch: main  # Which branch of the repository should be used when creating links (optional)
 
 # Add GitHub buttons to your book
