@@ -32,7 +32,7 @@ You will note that these notebooks contain a code cell which needs to be run to 
 
 ![First code cell for all notebooks, required to run the notebooks on Binder](./images/prepare_binder.png)
 
-Note that every napari operation will be shown in the desktop tab of your browser, and will only be able in the notebook interface after the `nbscreenshot` function is called. After running any cell which opens the napari viewer from the Jupyter notebook, you should now see the napari GUI window in the Desktop tab on your browser.
+Note that every napari operation will be shown in the desktop tab of your browser, and will only be visible in the notebook interface after the `nbscreenshot` function is called. After running any cell which opens the napari viewer from the Jupyter notebook, you should now see the napari GUI window in the Desktop tab on your browser.
 
 ![napari interface in Desktop tab](./images/napari_desktop.png)
 
