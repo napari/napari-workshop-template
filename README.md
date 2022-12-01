@@ -18,7 +18,7 @@ Once you have created your workshop, if you would like the event to be listed [i
 
 ## Documentation
 
-To learn more about how to build, publish, share and cite your workshop materials, check the [Build your own workshop section](https://melissawm.github.io/napari-workshop-template/docs/build_your_workshop.html).
+To learn more about how to build, publish, share and cite your workshop materials, check the [Build your own workshop section](https://napari.github.io/napari-workshop-template/docs/build_your_workshop.html).
 
 ## Contributing to this repository
 
