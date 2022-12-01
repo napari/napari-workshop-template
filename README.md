@@ -14,7 +14,7 @@ You can also click the `Use this template` button in the GitHub web interface fo
 
 ![Use this template button on GitHub interface](napari-workshops/docs/images/00-template.png)
 
-Once you have created your workshop, if you would like the event to be listed [in napari.org](https://napari.org/stable/further-resources/napari-workshops.html), feel free to submit a pull request to https://github.com/napari/napari
+Once you have created your workshop, if you would like the event to be listed [in napari.org](https://napari.org/stable/further-resources/napari-workshops.html), feel free to submit a pull request to https://github.com/napari/docs
 
 ## Documentation
 
