@@ -85,7 +85,7 @@ https://<your-username>.github.io/<workshop-name>
 
 For this template, the built site is at
 
-https://melissawm.github.io/napari-workshop-template
+https://napari.github.io/napari-workshop-template
 
 ## Index your workshop using Zenodo (for citation purposes)
 
