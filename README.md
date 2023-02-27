@@ -2,7 +2,9 @@
 
 A JupyterBook template for napari workshops.
 
-**To see the built website, go to https://<your_github_username>.github.io/napari-workshop-template**
+**To see the built website, go to
+https://<your_github_username>.github.io/napari-workshop-template**. For
+example, see this template [here](https://napari.org/napari-workshop-template/home.html).
 
 **To see a live version where you can execute the notebooks on your browser, use [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/napari/napari-workshop-template/binder)** (make sure this link points to your own repository!)
 
