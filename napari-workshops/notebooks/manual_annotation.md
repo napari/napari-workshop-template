@@ -4,7 +4,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.14.0
+    jupytext_version: 1.14.5
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
@@ -27,6 +27,7 @@ This tutorial will explore these three manual annotations in **[napari](https://
 
 ```{code-cell} ipython3
 :tags: [remove-output]
+
 # this cell is required to run these notebooks on Binder. Make sure that you also have a desktop tab open.
 import os
 if 'BINDER_SERVICE_HOST' in os.environ:
@@ -321,12 +322,12 @@ nbscreenshot(viewer)
 
 ```{code-cell} ipython3
 # Save out the nuclei labels as a tiff file
-viewer.layers['nuclei_labels'].save('nuclei-labels.tif', plugin='builtins');
+viewer.layers['nuclei_labels'].save('nuclei-labels.tif', plugin='napari');
 ```
 
 ```{code-cell} ipython3
 # Note that the cell labels could be reloaded into the viewer as follows
-viewer.open('nuclei-labels.tif', name='saved nuclei', plugin='builtins');
+viewer.open('nuclei-labels.tif', name='saved nuclei', plugin='napari');
 
 viewer.layers['nuclei_labels'].visible = False
 ```
