@@ -118,7 +118,7 @@ Now that we have the data array loaded, we can directly add it to the viewer.
 viewer.add_image(nuclei)
 ```
 
-Don't forget to change windows so you can now see the viewer. By default you'll just be looking at the 1st plane of the 3D data, which is the 0th slice of 60. You should see a single slider at the buttom of the viewer that will allow you to scroll through the rest of the z-stack. If you find the 30th slice then you should see the same as in the screenshot below.
+Don't forget to change windows so you can now see the viewer. By default you'll just be looking at the middle plane of the 3D data, which a z-stack with 60 slices. You should see a single slider at the buttom of the viewer that will allow you to scroll through the rest of the z-stack. If you find the 30th slice then you should see the same as in the screenshot below.
 
 ```{code-cell} ipython3
 :tags: [remove-cell]
