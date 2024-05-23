@@ -26,7 +26,28 @@ run
 python -m pip install -r requirements.txt
 ```
 
-### 2. Build your book
+### 2. Update the configuration files for the website
+
+You will want to update `napari-workshops/_toc.yml` and `napari-workshops/_config.yml` to 
+suit the needs of your workshop. These two files will determine how the website is rendered.
+
+In `_toc.yml` you can put the Markdown files you want to be rendered in the order you want them.
+
+```{important}
+You don't use the `.md` extension, just the name of the file.
+```
+
+Use the existing file as a template and adjust it to suit your needs. For example, we recommend
+removing *this section* on building the workshop from your final workshop materials.
+For more information, see the [official Jupyter Book Table of Contents documentation](https://jupyterbook.org/customize/toc.html).
+
+In `_config.yml` you can customize the build of the website. Be sure and take a look at, at a minimum:
+- `title` and `author` information at the top: adjust the title as needed and add your name to the authors!
+- the `repository` section towards the bottom: replace the URL of the template repository with your repository—this will be what the GitHub logo links to in your website—and ensure the `path_to_book` matches what you are using—you don't need to change this if you didn't change the layout of the repository.
+
+If you're curious about the other settings already in the file or the range of available options, see [the official official Jupyter Book documentation](https://jupyterbook.org/customize/config.html).
+
+### 3. Building your book locally
 
 To render the html version of your book, including autogenerating figures or
 running Jupyter notebooks, run
@@ -52,6 +73,10 @@ napari-workshops/_build/
 
 If you want to set up this material to be published as a website from your fork, using [GitHub pages](https://pages.github.com/), follow the steps below.
 
+```{important}
+For this to work, you need to have GitHub pages enabled on your GitHub account. To do this, follow the [deployment guide](deployment_guide).
+```
+
 1. Edit the `.github/workflows/pages.yml` file in your workshop folder to
    include any installation or setup requirements. By default, the following
    commands are run as a setup and build step:
@@ -74,8 +99,8 @@ If you want to set up this material to be published as a website from your fork,
         path: 'napari-workshops/_build/html'
     ```
 
-As currently configured, whenever a new commit is added to the `main` branch of the repository, a new deployment is made (the Jupyter book is built, and the
-generated pages are uploaded to [GitHub pages](https://docs.github.com/en/pages/quickstart). For this to work, you need to have GitHub pages enabled on your GitHub account. To do this, follow the [deployment guide](deployment_guide).
+As currently configured, whenever a new commit is added to the `main` branch of the repository, a new deployment is made: the Jupyter book is built and the
+generated pages are uploaded to [GitHub pages](https://docs.github.com/en/pages/quickstart). 
 
 After GitHub pages is set up for your repository, you will find the workshop materials at
 
