@@ -97,3 +97,14 @@ Select Creative Commons Attribution 4.0 International (CC-BY 4.0) license if you
 ## Enable a citation file for your repository
 
 Check [the GitHub documentation](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-citation-files) for more details on how to use the `citation.cff` file to enable others to cite your repository.
+
+## Upstream your ideas!
+
+If you spot something that can be improved in this template, or if you want to
+suggest adding a notebook to the base materials, feel free to reach out! You can:
+
+- [Create an issue](https://github.com/napari/napari-workshop-template/issues/new)
+  with suggestions for improvement;
+- [Submit a Pull Request](https://docs.github.com/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) to the workshop template repository with your suggested changes;
+- [Reach out on Zulip chat](https://napari.zulipchat.com/) to tell us about your workshop and give feedback on the template or napari itself;
+- Add your workshop materials (including video, if available) to [the Workshops page in the napari documentation website](https://napari.org/stable/further-resources/napari-workshops.html).
