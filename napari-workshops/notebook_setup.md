@@ -13,7 +13,8 @@ either downloading a .zip file (recommended for beginners) or cloning via git.
 ### Downloading a .zip file
 To download the notebooks as a .zip file, do the following:
 
-1. Click the GitHub logo at the top of this page or navigate your web browser to [the workshop's github repository](https://github.com/TheJacksonLaboratory/intro-napari-workshop): https://github.com/TheJacksonLaboratory/intro-napari-workshop
+1. Click the GitHub logo at the top of this page or navigate your web browser to the workshop's GitHub repository (for this
+   template, this is [https://github.com/napari/napari-workshop-template](https://github.com/napari/napari-workshop-template))
 2. Click the green (or blue) "Code" button to open the download menu and then
    "Download ZIP" ![download code](./resources/download_code.png)
 3. Choose the location you would like to download the .zip into.
@@ -60,10 +61,10 @@ conda install jupytext jupyterlab-myst
 ## Launch the `jupyter lab` application
 
 Navigate to the `notebooks` subdirectory of the
-`intro-napari-workshop` directory you just downloaded.
+`napari-workshop-template` directory you just cloned or downloaded.
 
 ```
-cd <path to intro-napari-workshop>/notebooks
+cd <path to napari-workshop-template>/notebooks
 ```
 
 Remember to activate the `napari-workshop` conda environment if you haven't already.
