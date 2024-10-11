@@ -66,7 +66,7 @@ tutorial. This environment includes all of the packages required to make your
 plugin (including `cookiecutter`).
 
 ```bash
-conda activate napari-tutorial
+conda activate napari-workshop
 ```
 
 In this next step, we will use `cookiecutter` to create a directory for our
@@ -463,7 +463,7 @@ where = src
 
 ## Testing/Installing your plugin
 To test and use our plugin, we need to install it in our Python environment.
-First, return to your terminal and verify you have the `napari-tutorial`
+First, return to your terminal and verify you have the `napari-workshop`
 environment activated. Then, navigate to the directory that you created with the
 cookiecutter. For example, if you named your plugin `napari-spot-detector`, you
 would enter the following into your terminal.

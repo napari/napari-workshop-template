@@ -98,20 +98,20 @@ as well and you can skip to the next section.
 2. We use an environment to encapsulate the Python tools used for this workshop.
    This ensures that the requirements for this workshop do not interfere with
    your other Python projects. To create the environment (named
-   `napari-tutorial`) and install Python 3.11 and napari in it, enter the following command:
+   `napari-workshop`) and install Python 3.11 and napari in it, enter the following command:
 
     ```bash
-    conda create -n napari-tutorial -c conda-forge python=3.11 napari pyqt jupyterlab
+    conda create -n napari-workshop -c conda-forge python=3.11 napari pyqt jupyterlab
     ```
 
 3. Once the environment setup has finished, activate the environment:
 
     ```bash
-    conda activate napari-tutorial
+    conda activate napari-workshop
     ```
 
     If you successfully activated the environment, you should now see
-   `(napari-tutorial)` to the left of your command prompt.
+   `(napari-workshop)` to the left of your command prompt.
 
 4. Install the additional workshop dependencies with the commands below.  
 
@@ -124,7 +124,7 @@ as well and you can skip to the next section.
    For the `stardist` plugin:
 
     ```bash
-    conda install stardist-napari
+    conda install -c conda-forge stardist-napari
     ```
 
 6. Test that your notebook installation is working. We will be using notebooks
