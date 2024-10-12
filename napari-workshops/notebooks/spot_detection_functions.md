@@ -285,7 +285,7 @@ def detect_spots(
         high_pass_sigma: float = 2,
         spot_threshold: float = 0.2,
         blob_sigma: float = 2
-        )->"napari.types.LayerDataTuple":
+        ) -> "napari.types.LayerDataTuple":
     """Apply a gaussian high pass filter to an image.
 
     Parameters
