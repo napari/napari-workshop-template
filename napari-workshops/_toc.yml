@@ -19,4 +19,9 @@ chapters:
   - file: notebooks/segmenting_and_measuring_nuclei_stardist
   - file: notebooks/manual_annotation
   - file: notebooks/custom_colormaps
+  - header: "Alternative Spot Detection Notebooks"
+    - sections:
+      - file: notebooks/spot_detection_basics
+      - file: notebooks/spot_detection_functions
+
 - file: make_a_simple_plugin
