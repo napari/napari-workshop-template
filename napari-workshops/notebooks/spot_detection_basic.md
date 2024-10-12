@@ -120,7 +120,7 @@ nbscreenshot(viewer)
 
 ## Create an image filter
 
-If you look carefull at the `spots` layer, you will notice that it contains background and
+If you look carefully at the `spots` layer, you will notice that it contains background and
 autofluorescence from the cells. It may help to just look at the single channel.
 
 ```{code-cell} ipython3
@@ -164,7 +164,7 @@ nbscreenshot(viewer)
 
 ## Detect spots
 
-Next, we will use one of the blob detection algorithms from sci-kit image to
+Next, we will use one of the blob detection algorithms from scikit-image to
 perform the blob detection.
 
 ```{tip}
@@ -179,7 +179,7 @@ from skimage.feature import blob_log
 blobs_log = blob_log(
     high_passed_spots,
     max_sigma=3,
-    threshold=None, # use a relative threshold instead
+    threshold=None,  # use a relative threshold instead
     threshold_rel=0.2
 )
     
