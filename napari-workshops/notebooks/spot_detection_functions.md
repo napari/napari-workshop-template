@@ -197,8 +197,9 @@ viewer.window.remove_dock_widget("all")
 
 ```{code-cell} ipython3
 @magicgui(
-    auto_call=True, 
-    sigma={"widget_type": "FloatSlider", "min": 0, "max": 20})
+        auto_call=True, 
+        sigma={"widget_type": "FloatSlider", "min": 0, "max": 20}
+        )
 def gaussian_high_pass(
         image: "napari.types.ImageData", sigma: float = 2
         ) -> "napari.types.ImageData":
