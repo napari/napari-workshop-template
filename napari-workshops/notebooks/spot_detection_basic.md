@@ -176,12 +176,12 @@ perform the blob detection.
 from skimage.feature import blob_log
 
 # detect the spots on the filtered image
+```python
 blobs_log = blob_log(
-    high_passed_spots,
-    max_sigma=3,
+    high_passed_spots, max_sigma=3,
     threshold=None,  # use a relative threshold instead
-    threshold_rel=0.2
-)
+    threshold_rel=0.2)
+```
     
 # convert the output of the blob detector to the 
 # desired points_coords and sizes arrays
