@@ -130,7 +130,8 @@ viewer.layers['nuclei'].visible = False
 To improve spot detection, we will apply a high pass filter to improve the contrast of the spots.
 
 A simple way to achieve this is to:
-1. blur the image with a Gaussian, which removes high-frequency information—this is why we use it for denoising.
+1. blur the image with a Gaussian, which removes high-frequency information (small features, including
+our spots)—this is why we use it for denoising.
 2. subtract the blurred image from the original.
 
 Lets try this using the `gaussian_filter` from `scipy` with a sigma of 2 px and lets clip any negative values:
