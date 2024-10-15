@@ -39,10 +39,10 @@ this tutorial.
  git clone https://github.com/napari/napari-workshop-template.git
  ```
 
-## Install additional `jupytext` dependency
+## Install the additional `jupytext` dependency
 
 Because the notebooks were converted to MyST Markdown files (with a .md extension),
-to better  visualize on GitHub and provide a nice rendered look on the web,
+to better visualize on GitHub and provide a nice rendered look on the web,
 you need to install one additional dependency to run them locally.
 
 ````{important}
