@@ -20,7 +20,7 @@ There are 3 main types of manual annotation that napari provides, each correspon
 - drawing 2D polygons to identify particular regions of interest with the **Shapes** layer
 - painting labels to provide a pixel-wise annotation of an image with the **Labels** layer
 
-This tutorial will explore these three manual annotations in napari, using the same data from the previous image visualization tutorial. Once again, we will try to highlight the bidirectional communication between the viewer and the Python kernel.
+This tutorial will explore these three manual annotations in napari, using the same data from the [Bioimage visualization in Python tutorial](intro_bioimage_visualization.md). Once again, we will try to highlight the bidirectional communication between the viewer and the Python kernel.
 
 ## Setup
 
@@ -66,11 +66,11 @@ nbscreenshot(viewer)
 
 ## Annotating dividing and non-dividing cells using the points layer
 
-One simple task that a biologist or bioimage analyst might be interested in annotating each cell as diving or non-dividing.
+One simple task that a biologist or bioimage analyst might be interested in is annotating each cell as dividing or non-dividing.
 
 In order to do this we are going to add two points layers to the viewer, one called `dividing` and one called `non-dividing` and set some basic properties on these layers.
 
-You can add the layers using the new points button in the middle of the left panel of the viewer (left-most button featuring with many small dots), or you can add them programmatically from the viewer. We'll add them programmatically from the viewer for this example.
+You can add the layers using the "new points" button in the `layer list` panel of the viewer (left-most button featuring with many small dots), or you can add them programmatically from the viewer. We'll add them programmatically from the viewer for this example.
 
 ```{code-cell} ipython3
 # add the first points layer for dividing cells
@@ -86,7 +86,7 @@ Notice now how two new layers have been created, and that these layers have diff
 nbscreenshot(viewer)
 ```
 
-To add points you must enter add mode. This can be done by clicking on the `add` mode button in the top row of the control panel (2nd from the left, circle with a plus in it), or programmatically from the notebook.
+To add points you must enter add mode. This can be done by clicking on the `add` mode button in the top row of the `layer controls` panel (2nd from the left, circle with a plus in it), or programmatically from the notebook.
 
 ```{code-cell} ipython3
 # programmatically enter `add` mode for both Points layers to enable editing
@@ -98,7 +98,7 @@ viewer.layers['non-dividing'].mode = 'add'
 nbscreenshot(viewer)
 ```
 
-Now start adding points, clicking once per cell, approximately in the center of the cell, with the appropriate `Points` layer selected. You can tell which `Points` layer is selected because it will be highlighted left in the layers list in the bottom left hand corner of the screen. You can rapidly switch between selected layers using the up and down keys. Also don't forget this is a z-slice so you should move up and down the slice, which can also be done with the left/ right key.
+Now start adding points, clicking once per cell, approximately in the center of the cell, with the appropriate `Points` layer selected. You can tell which `Points` layer is selected because it will be highlighted in the layers list in the bottom left hand corner of the screen. You can rapidly switch between selected layers using the up and down keys. Also don't forget this is a z-slice so you should move up and down the slice, which can also be done with the left/ right key.
 
 ```{note}
 Points can be added in the 3D viewer mode, however it can be difficult to precisely control placement
@@ -153,8 +153,8 @@ nbscreenshot(viewer)
 You can also get the number of cells of each class and an array of their centers as follows:
 
 ```{code-cell} ipython3
-print('Number of diving cells: ', len(viewer.layers['dividing'].data))
-print('Number of non-diving cells: ', len(viewer.layers['non-dividing'].data))
+print('Number of dividing cells: ', len(viewer.layers['dividing'].data))
+print('Number of non-dividing cells: ', len(viewer.layers['non-dividing'].data))
 ```
 
 ```{code-cell} ipython3
@@ -314,7 +314,7 @@ nbscreenshot(viewer)
 
 ````{tip}
 If you want to *remove* layers programmatically, you can do so by index, for
-example to remove the bottom most layer (0th index):
+example to remove the bottom-most layer (0th index):
 
 ```python
 viewer.layers.pop(0)    # remove the bottom-most layer
