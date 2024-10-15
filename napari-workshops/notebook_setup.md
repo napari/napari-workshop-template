@@ -87,10 +87,10 @@ To open these workshop notebooks in the Jupyter interface, right click the noteb
 
 ![Right click on "intro_bioimage_visualization.md" file, and select "Open with -> Notebook"](./resources/open_with_notebook.png)
 
-Or, as an alternative you can first convert them to normal `.ipynb` using:
+Or, as an alternative you can first convert them to `.ipynb` files using:
 
 ```bash
-jupytext –to ipynb <notebook_file>.md
+jupytext --to ipynb <notebook_file>.md
 ```
 
 ````
