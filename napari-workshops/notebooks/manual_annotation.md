@@ -20,8 +20,7 @@ There are 3 main types of manual annotation that napari provides, each correspon
 - drawing 2D polygons to identify particular regions of interest with the **Shapes** layer
 - painting labels to provide a pixel-wise annotation of an image with the **Labels** layer
 
-This tutorial will explore these three manual annotations in **[napari](https://napari.org/)**, using that same data from the image visualization tutorial.
-
+This tutorial will explore these three manual annotations in napari, using the same data from the [Bioimage visualization in Python tutorial](intro_bioimage_visualization.md). Once again, we will try to highlight the bidirectional communication between the viewer and the Python kernel.
 
 ## Setup
 
@@ -45,22 +44,21 @@ from napari.utils import nbscreenshot
 viewer = napari.Viewer()
 ```
 
-In this notebook we will load our data directly into napari using out builtin plugin reader
+In this notebook we will use the same `cells3d` data set:
 
 ```{code-cell} ipython3
-:tags: [remove-output]
+from skimage.data import cells3d
 
-viewer.open('data/nuclei.tif')
+image_data = cells3d()  # shape (60, 2, 256, 256)
+
+membranes = image_data[:, 0, :, :]
+nuclei = image_data[:, 1, :, :]
+
+viewer.add_image(nuclei)
 ```
 
-This loads the 3D data into the napari viewer. 
-Scrolling to the 30th z-slice should look as follows:
-
-```{code-cell} ipython3
-:tags: [remove-cell]
-
-viewer.dims.current_step = (30, 0, 0)
-```
+This loads the 3D data into the napari viewer on the 30th slice. Let's take a screenshot
+for record keeping.
 
 ```{code-cell} ipython3
 nbscreenshot(viewer)
@@ -68,11 +66,11 @@ nbscreenshot(viewer)
 
 ## Annotating dividing and non-dividing cells using the points layer
 
-One simple task that a biologist or bioimage analyst might be interseted in annotating each cell as diving or non-dividng.
+One simple task that a biologist or bioimage analyst might be interested in is annotating each cell as dividing or non-dividing.
 
 In order to do this we are going to add two points layers to the viewer, one called `dividing` and one called `non-dividing` and set some basic properties on these layers.
 
-You can add the layers using the new points button in the middle of the left panel of the viewer (left-most button featuring with many small dots), or you can add them programatically from the viewer. We'll add them programatically from the viewer for this example.
+You can add the layers using the "new points" button in the `layer list` panel of the viewer (left-most button featuring with many small dots), or you can add them programmatically from the viewer. We'll add them programmatically from the viewer for this example.
 
 ```{code-cell} ipython3
 # add the first points layer for dividing cells
@@ -88,10 +86,10 @@ Notice now how two new layers have been created, and that these layers have diff
 nbscreenshot(viewer)
 ```
 
-To add points you must enter add mode. This can be done by clicking on the add mode button in the top row of the control panel (2nd from the left, circle with a plus in it), or programatically from the notebook.
+To add points you must enter add mode. This can be done by clicking on the `add` mode button in the top row of the `layer controls` panel (2nd from the left, circle with a plus in it), or programmatically from the notebook.
 
 ```{code-cell} ipython3
-# programatically enter add mode for both Points layers to enable editing
+# programmatically enter `add` mode for both Points layers to enable editing
 viewer.layers['dividing'].mode = 'add'
 viewer.layers['non-dividing'].mode = 'add'
 ```
@@ -100,13 +98,20 @@ viewer.layers['non-dividing'].mode = 'add'
 nbscreenshot(viewer)
 ```
 
-Now start adding points, clicking once per cell, approximately in the center of the cell, with the appropriate `Points` layer selected. You can tell which `Points` layer is selected because it will be highlighted left in the layers list in the bottom left hand corner of the screen. You can rapidly switch between selected layers using the up and down keys. Also don't forget this is a z-slice so you should move up and down the slice, which can also be done with the left/ right key.
+Now start adding points, clicking once per cell, approximately in the center of the cell, with the appropriate `Points` layer selected. You can tell which `Points` layer is selected because it will be highlighted in the layers list in the bottom left hand corner of the screen. You can rapidly switch between selected layers using the up and down keys. Also don't forget this is a z-slice so you should move up and down the slice, which can also be done with the left/ right key.
+
+```{note}
+Points can be added in the 3D viewer mode, however it can be difficult to precisely control placement
+within the volume. For more control, you may wish to investigate the tools provided by the
+[napari-threedee plugin](https://napari-threedee.github.io).
+```
 
 After annotation, my data looks as follows:
 
 ```{code-cell} ipython3
 :tags: [remove-cell]
 
+# this data is added to represent coordinates of points placed manually
 viewer.layers['dividing'].add([30, 88.1365794 , 54.39650486])
 viewer.layers['non-dividing'].add(
       [[30,  13.90840911,  27.02955319],
@@ -148,8 +153,8 @@ nbscreenshot(viewer)
 You can also get the number of cells of each class and an array of their centers as follows:
 
 ```{code-cell} ipython3
-print('Number of diving cells:', len(viewer.layers['dividing'].data))
-print('Number of non-diving cells:', len(viewer.layers['non-dividing'].data))
+print('Number of dividing cells: ', len(viewer.layers['dividing'].data))
+print('Number of non-dividing cells: ', len(viewer.layers['non-dividing'].data))
 ```
 
 ```{code-cell} ipython3
@@ -157,21 +162,29 @@ print('Number of non-diving cells:', len(viewer.layers['non-dividing'].data))
 viewer.layers['non-dividing'].data
 ```
 
-To save a `csv` file with these values for each layer you can use our builtin writer functionality. Note these csv files can easily be opened up into standard tools like pandas or excel for further analysis.
+To save a `csv` file with these values for each layer you can use our builtin writer functionality. Note these csv files can easily be opened up into standard tools like [`pandas`](https://pandas.pydata.org) or Excel for further analysis.
 
 ```{code-cell} ipython3
-# Save out Points layer data to a csv file
+# Uncomment the lines below to save out Points layer data to csv files
 #viewer.layers['dividing'].save('dividing.csv', plugin='builtins')
 #viewer.layers['non-dividing'].save('non-dividing.csv', plugin='builtins')
 ```
 
-Points layers also have a properties dictionary that would enable you to add other attributes like `volume` or `maximum-intensity` should you calculate those for each cell. You can learn more about the these advanced points annotations from the [tutorial](https://napari.org/tutorials/applications/annotate_points).
+Points layers also have a `features` dictionary that would enable you to add other attributes like `volume` or `maximum-intensity` should you calculate those for each cell. You can learn more about the these advanced points annotations from the [tutorial](https://napari.org/stable/tutorials/annotation/annotate_points.html) or the ["Add points with features" Gallery example](https://napari.org/stable/gallery/add_points_with_features.html#sphx-glr-gallery-add-points-with-features-py).
 
 
 ## Drawing polygons around cells
 Another common task for research biologists and bioimage analysts is drawing polygons around regions of interest, in this case nuclei. These polygons might be used for segmentation and to quantify properties of interest.
 
-For this example we'll work with a 2D maximum intensity projection of our cells in order to keep things simple. We can take the data we've already loaded into napari and use it for the projection.
+```{note}
+At present (napari 0.5.4), napari does not support adding or editing shapes in 3D viewer mode. This 
+means they can only be drawn/edited on the orthogonal 2D slices.
+However, shapes can be added programmatically that have vertexes that are not on the 2D orthogonal planes
+and they will be properly rendered in 3D.
+```
+
+For the sake of this example, lets make a 2D maximum intensity projection of our cells in order to keep things simple. We can actually use the data we've already loaded into napari, because it's just a numpy array,
+and use it for the projection.
 
 ```{code-cell} ipython3
 # Take the maximum intensity projection of the cells
@@ -191,15 +204,11 @@ viewer.add_image(nuclei_mip);
 nbscreenshot(viewer)
 ```
 
-We can now add an empty new shapes layer from the GUI using the new shapes button (middle of the left panel, 2nd from the left with a polygon on it) or programatically from the notebook.
+We can now add an empty new shapes layer from the GUI using the new shapes button (middle of the left panel, 2nd from the left with a polygon on it) or programmatically from the notebook. (Let's ensure we're in 2D mode.)
 
 ```{code-cell} ipython3
-:tags: [remove-cell]
-
 viewer.dims.ndisplay = 2
-```
 
-```{code-cell} ipython3
 viewer.add_shapes(name='nuclei outlines', face_color='red', edge_color='white', opacity=0.7)
 ```
 
@@ -214,6 +223,7 @@ We will draw some shapes with the polygon tool around a couple of different nucl
 ```{code-cell} ipython3
 :tags: [remove-cell]
 
+# this data is added to represent coordinates of shapes drawn manually
 p1 = [[142.12070325,  94.13481824],
       [150.36827772,  89.26125151],
       [163.86430869,  87.76169251],
@@ -276,7 +286,7 @@ These shapes, and the underlying image can be saved as an svg file using our ded
 #viewer.layers.save('nuclei-outlines.svg', plugin='napari-svg')
 ```
 
-Similarly to the points layer, we're working on adding support for properties dictionary to the shapes layer which would allow you to assign attributes to each shape and do things like adjust shape color based on them.
+Alternately, the shapes can be saved to a `csv` file just like we saved the points earlier.
 
 One common thing to use a shapes for is creating a binary mask or labels image where each pixel is assigned an integer label of the shape it is contained within, if any. napari provides some tooling to make these conversions easy.
 
@@ -291,7 +301,7 @@ print('Number of labels:', nuclei_labels.max())
 We can now add this labels image to the viewer as a labels layer.
 
 ```{code-cell} ipython3
-# Add the cell segmenation labels as a labels layer
+# Add the cell segmentation labels as a labels layer
 viewer.add_labels(nuclei_labels);
 
 # Turn off the visibility of the shapes layer so as not to get confused
@@ -302,11 +312,32 @@ viewer.layers['nuclei outlines'].visible = False
 nbscreenshot(viewer)
 ```
 
+````{tip}
+If you want to *remove* layers programmatically, you can do so by index, for
+example to remove the bottom-most layer (0th index):
+
+```python
+viewer.layers.pop(0)    # remove the bottom-most layer
+```
+or you can also remove a layer by passing the layer directly:
+
+```python
+viewer.layers.remove(viewer.layers['layer to remove'])
+```
+````
+
 ## Painting labels for pixel-wise annotations
 
-With the labels layer we can now make pixel-wise annotaions using a paintbrush, fill bucket, and eraser tools (see the row of buttons in the control panel in the top left of the viewer).
+With the labels layer we can now make pixel-wise annotations using a paintbrush, fill bucket, 
+and eraser tools (see the row of buttons in the control panel in the top left of the viewer).
 
-Using these tools we can touch up any of the labels that we got from our polygon masks or draw entirely new ones.
+Using these tools we can touch up any of the labels that we got from our polygon masks or draw entirely new ones. As noted for Points layers, napari does support painting labels while in 3D viewer mode, but it
+is tricky to paint within the volume due to the mouse/2D screen limitations.
+
+```{tip}
+For improving your manually labeling workflow, be sure to check out the Labels layer keybindings
+in the napari Preferences/Settings. For example, by default the M-key will increment the label to the next unused label, while the P-key will toggle preserving existing labels, preventing you from painting over them.
+```
 
 ```{code-cell} ipython3
 :tags: [remove-cell]
