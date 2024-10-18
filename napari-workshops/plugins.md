@@ -24,7 +24,7 @@ Also keep in mind that plugins with complex or compiled dependencies or those th
 For more information on plugins, please see the [official Plugin documentation](https://napari.org/stable/plugins/index.html).
 
 ## Install Your First Plugins  
-* Navigate to [napari-hub.org](https://www.napari-hub.org)—this is the platform to discover and share plugins.  
+* (Optional) Navigate to [napari-hub.org](https://www.napari-hub.org)—this is the platform to discover and share plugins. Actual plugin installation will be done via napari--we detail this step below.
 * **napari-bio-sample-data** : some additional sample data (File menu)
     * Search for **sample**.
     * Scroll down until you see **napari-bio-sample-data**.  
@@ -42,7 +42,7 @@ and wait for the plugin list to populate.
 * Once the install completes, search for **regionprops** and install that plugin as well.  
 
     ```{note}
-    - After clicking the install button and you can monitor the **installing…** process by clicking `Show status`. This can be helpful in trouble-shooting installation issues.
+    - After clicking the install button, you can monitor the **installing…** process by clicking `Show status`. This can be helpful in trouble-shooting installation issues.
     - After installing, you will typically need to close napari and reopen it, then  continue.
     ``` 
 
@@ -54,9 +54,9 @@ and wait for the plugin list to populate.
     are present. You can explore these in the 3D view. Delete the surface layer once you're ready to move
     on.
 * Open **Tools**>**Measurement Tables**>**Regionprops (scikit-image, nsr)**
-    * Ensure that `nuclei (data)` is selected for the `image` layer and `nuclei label (data)` is selected
+    * Ensure that `nuclei (data)` is selected for the `image` layer and `nuclei label (data)` is selected in the `image` and `labels` dropdown menus for the Regionprops plugin, respectively.
     for the `labels` layer.
-    * Use the checkboxes to select some properties to measure. Refer to the [scikit-image `measure.regionprops` documentation](https://scikit-image.org/docs/stable/api/skimage.measure.html#skimage.measure.regionprops) for more information
+    * Use the checkboxes to select some properties to measure, such as `perimeter` or `position`. Refer to the [scikit-image `measure.regionprops` documentation](https://scikit-image.org/docs/stable/api/skimage.measure.html#skimage.measure.regionprops) for more information
     * Click run, which should yield a table of measurements—depending how many you checked, this could take
     a moment to run.
 
@@ -67,7 +67,7 @@ and wait for the plugin list to populate.
     e.g. where the viewer buttons are, to dock it beneath the canvas.
     ```
 
-    * In the labels layer layer controls widget, check the box `show selected` to only view the currently
+    * In the labels layer controls widget, check the box `show selected` to only view the currently
     selected label. Now in the table, when you click a cell you will be shown the corresponding label.
     
     ```{tip}
