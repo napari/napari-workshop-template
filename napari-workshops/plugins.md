@@ -64,7 +64,7 @@ and wait for the plugin list to populate.
     Grab the titlebar of the new widget `Properties of nuclei label` and drag it off the napari
     viewer to undock. Then you can resize the table for easier browsing.
     You can re-dock the widget by dragging it on the existing side dock  or the bottom of the viewer,
-    e.g. where the viewer buttons are, to dock it beneath the canvas.
+    e.g. where the viewer buttons are, to dock it as a tab next to "layer list".
     ```
 
     * In the labels layer controls widget, check the box `show selected` to only view the currently
