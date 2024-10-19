@@ -12,6 +12,7 @@ chapters:
   sections:
   - file: installation
   - file: notebook_setup
+- file: plugins
 - file: notebooks/index
   sections:
   - file: notebooks/intro_bioimage_visualization
