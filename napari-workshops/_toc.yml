@@ -13,6 +13,7 @@ chapters:
   - file: installation
   - file: notebook_setup
 - file: intro_napari_GUI
+- file: plugins
 - file: notebooks/index
   sections:
   - file: notebooks/intro_bioimage_visualization
@@ -20,4 +21,9 @@ chapters:
   - file: notebooks/segmenting_and_measuring_nuclei_stardist
   - file: notebooks/manual_annotation
   - file: notebooks/custom_colormaps
+  - file: notebooks/alternative_notebooks
+    sections:
+    - file: notebooks/spot_detection_basics
+    - file: notebooks/spot_detection_functions
+
 - file: make_a_simple_plugin
