@@ -202,7 +202,7 @@ The integrated console is a full-featured iPython kernel. You can use it for int
 analysis, just import `numpy` or `skimage`. You can use `tab` for auto-completions and the Up
 arrow to access the command history. Use a ? to access documentation, e.g.
     
-```python
+```
 viewer?
 ```
 
