@@ -33,7 +33,7 @@ conda update conda
 conda config --add channels conda-forge
 ```
 
-Once you have that set, you can skip to [the next section](setting-up-your-environment).
+Once you have that set, you can skip to [the next section](#setting-up-your-environment).
 ````
 
 1. In your web browser,  go to:  
