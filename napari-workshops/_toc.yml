@@ -12,6 +12,7 @@ chapters:
   sections:
   - file: installation
   - file: notebook_setup
+- file: intro_napari_GUI
 - file: plugins
 - file: notebooks/index
   sections:
@@ -22,7 +23,7 @@ chapters:
   - file: notebooks/custom_colormaps
   - file: notebooks/alternative_notebooks
     sections:
-    - file: notebooks/spot_detection_basics
+    - file: notebooks/spot_detection_basic
     - file: notebooks/spot_detection_functions
 
 - file: make_a_simple_plugin
