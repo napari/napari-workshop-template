@@ -134,9 +134,7 @@ can be made available by plugins.
 
 Multiple different layer types, e.g. image and points, can be saved to a single `.svg` file,
 which can be convenient for use in a vector graphics program or for web. 
-* Select more than one layer and use the File menu or Command+S (Mac) / Control+S (Windows and Linux), 
-
-then in the dialog dropdown menu ensure `napari SVG` is selected, give the file a name, and save.
+* Select more than one layer and use the File menu or Command+S (Mac) / Control+S (Windows and Linux), then in the dialog dropdown menu ensure `napari SVG` is selected, give the file a name, and save.
 
 
     ```{important} 
@@ -145,10 +143,7 @@ then in the dialog dropdown menu ensure `napari SVG` is selected, give the file 
 
 Perhaps more usefully, multiple different layer types, e.g. image and points, can be saved as
 individual layers (as described above) *to a folder.* 
-* Select more than one layer and use the File menu or Command+S (Mac) / Control+S (Windows and Linux) or use Command+Option+S (Mac) / Control+Alt+S (Windows and Linux) to save all layers. Then in the dialog dropdown menu change `napari-svg`
-
-to `napari builtins Save to Folder`. Enter a folder name and hit save. A new folder with that name will be
-created and the files will be individually exported there, as noted above.
+* Select more than one layer and use the File menu or Command+S (Mac) / Control+S (Windows and Linux) or use Command+Option+S (Mac) / Control+Alt+S (Windows and Linux) to save all layers. Then in the dialog dropdown menu change `napari-svg` to `napari builtins Save to Folder`. Enter a folder name and hit save. A new folder with that name will be created and the files will be individually exported there, as noted above.
 
     ```{important} 
     To re-open the files, open the enclosing folder, select all the files, and drag-n-drop them on the napari canvas. At present, opening the folder directly, if it contains a mix of layer types, will not work—only images are supported in this way. Note that a folder of images will be imported as a stack.
